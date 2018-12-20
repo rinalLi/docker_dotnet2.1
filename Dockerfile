@@ -17,8 +17,8 @@ RUN apt-get install -y dotnet-sdk-2.1
 
 RUN apt-get install -y supervisor && \
     mkdir -p /var/log/supervisor
-COPY supervisord.conf /etc/supervisor/conf.d/start.conf
-COPY u.conf /etc/supervisor/supervisord.conf
+COPY start.conf /etc/supervisor/conf.d/start.conf
+COPY supervisord.conf /etc/supervisor/supervisord.conf
 
 # expose ports
 EXPOSE 5000
